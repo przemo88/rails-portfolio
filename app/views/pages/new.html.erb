@@ -1,0 +1,22 @@
+<%= form_with model: @page, local: true do |form| %>
+<div class="field">
+  <%= form.label "Name" %>
+  <%= form.text_field :name %>
+</div>
+  <div>
+  <%= form.label "Description" %>
+    <%= form.text_field :description %>
+  </div>
+  <div>
+  <%= form.label "GitHub" %>
+    <%= form.text_field :github %>
+  </div>
+  <div>
+  <%= form.label "Website" %>
+    <%= form.text_field :website %>
+  </div>
+  <%= form.label :image %>
+  <%= form.file_field :image%>
+  
+  <%= form.submit "Add" %>
+<% end %>

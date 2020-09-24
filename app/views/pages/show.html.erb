@@ -1,0 +1,9 @@
+Page number:  <%= @page.id %>
+<div><%= @page.name %></div>
+
+ <div><%= @page.description %></div>
+ <div><%= @page.github %></div>
+ <div><%= @page.website%></div>
+ <div><%= link_to image_tag(@page.image), page_path %></div>
+
+<%= link_to("Delete", {:action=>'delete', :id=>@page.id})%>

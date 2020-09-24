@@ -1,0 +1,7 @@
+<p>Are you sure ? <%= @page.name %> ?</p>
+
+<%= form_for(@page, :html => { :method => :delete, :remote => true }) do |form| %>
+
+ <%= form.submit "Delete" %>
+
+<% end %>

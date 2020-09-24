@@ -1,0 +1,9 @@
+<% @page.each do |page| %>
+
+  <%= page.name %></br>
+  <%= page.description %></br>
+  <%= page.github %></br>
+  <%= page.website%></br>
+  <div><%=image_tag(page.image) if page.image.attached? %></div>
+
+<% end %>
