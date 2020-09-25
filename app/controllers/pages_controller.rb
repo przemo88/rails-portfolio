@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+
+  http_basic_authenticate_with name: ENV['LOGIN'], password: ENV['PASSWORD'], except: [:index, :show] 
+
   def index
     @page = Page.all
   end
@@ -9,7 +12,6 @@ class PagesController < ApplicationController
 
   def show
     @page = Page.find(params[:id])
-    
   end
 
 
