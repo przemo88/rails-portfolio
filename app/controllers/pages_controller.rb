@@ -4,6 +4,7 @@ class PagesController < ApplicationController
 
   def index
     @page = Page.all
+    @count = Page.count
   end
 
   def new

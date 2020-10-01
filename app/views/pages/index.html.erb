@@ -1,9 +1,22 @@
-<% @page.each do |page| %>
+<section id="portfolio">
+    <div class="container">
+        <div class="row">
+            <% if @count == 0 %>
+            <div>Dodaj nową stronę</div>
+            <% else %>
 
-  <%= page.name %></br>
-  <%= page.description %></br>
-  <%= page.github %></br>
-  <%= page.website%></br>
-  <div><%=image_tag(page.image) if page.image.attached? %></div>
-
-<% end %>
+            <% @page.each do |page| %>
+    <div class="website margin_top margin_xl_top col-lg-5 col-12 offset-lg-1 mt50 image">
+        <div class="sample_title"><%= page.name %></div>
+        <div>
+            <div class=" col-12 col-lg-12">
+            <div class="link"><%= link_to "opis" , {:action => "", :controller => "pages", :id => page.id}%></div>
+                <div><%=image_tag(page.image)  if page.image.attached? %></div> 
+            </div>
+        </div>
+    </div>
+            <% end %>
+                <% end %>
+                </div>
+                </div>
+</section>

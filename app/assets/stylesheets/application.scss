@@ -12,5 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 @import "bootstrap/scss/bootstrap";
+@import "statics.scss";
+@import "page.scss";
