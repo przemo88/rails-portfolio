@@ -1,7 +1,14 @@
-<p>Czy jesteś pewien, że chcesz usunąć  <%= @page.name %> ?</p>
+<div class="container">
+<div class="row">
+<h1 class="col-lg-4 offset-lg-4 title">Usuń stronę</h1>
+<div class="col-lg-4 col-10 offset-2 offset-lg-4">Czy jesteś pewien, że chcesz usunąć  <%= @page.name %> ?</div>
 
+<div class="col-lg-4 col-4 col-md-4 offset-md-4 offset-4 offset-lg-4 delete_btn">
 <%= form_for(@page, :html => { :method => :delete, :remote => true }) do |form| %>
 
- <%= form.submit "Delete" %>
+ <%= form.submit "Usuń" %>
 
 <% end %>
+</div>
+</div>
+</div>

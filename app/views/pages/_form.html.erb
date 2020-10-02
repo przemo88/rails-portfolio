@@ -2,10 +2,10 @@
 
   <% if @page.errors.any? %>
     <div id="error_explanation">
-      <h2>
+      <h2 class="link sample_title">
        Liczba błędów:  <%= @page.errors.count %> 
       </h2>
-      <ul>
+      <ul class="alert alert-danger link">
         <% @page.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
@@ -34,7 +34,7 @@
   <div class="col-lg-8 offset-lg-2">
       <%= form.label "Zdjęcie", class: "col-lg-4 offset-lg-4 form_text" %>
       <%= form.file_field :image %>
-      <%= form.submit "Dodaj", class: "col-lg-2 mt-50" %>
+      <%= form.submit "Zapisz", class: "col-lg-2 mt-50" %>
   </div>
 </div>
   

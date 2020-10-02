@@ -20,6 +20,7 @@ class PagesController < ApplicationController
     @page = Page.new(page_params)
 
     if @page.save 
+      flash[:notice] = "Dodano nową stronę."
     redirect_to @page
     else
       render 'new'
@@ -35,6 +36,7 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id])
     if @page.update(page_params)
       redirect_to @page
+      flash[:notice] = "Strona została zmodyfikowana."
     else
       render 'edit'
     end
@@ -48,6 +50,7 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id])
     if @page.destroy
     redirect_to @page
+    flash[:notice] = "Strona została usunięta."
     else
       redirect_to 'delete'
   end
